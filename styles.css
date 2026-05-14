@@ -293,6 +293,10 @@ body::before {
     cursor: pointer;
 }
 
+.cursor-pointer{
+    cursor: pointer;
+}
+
 .header-button-group {
     display: flex; 
     gap: 24px; 
@@ -312,6 +316,7 @@ body::before {
     background: var(--color-brand);
     color: #ffffff;
     border-radius: var(--radius-sm);
+    cursor: pointer;
 }
 
 .cta-expert-btn {

@@ -24,9 +24,9 @@
              <header class="header">
                     <img src="images/headerImage.png" height="45" width="100" alt="Mangalam Industries logo">
                     <div class="header-button-group">
-                        <button class="header-button transparent-button"> About Us </button>
-                        <button class="header-button transparent-button"> Products </button>
-                        <button class="header-button filled-button"> Contact Us </button>
+                        <button class="header-button transparent-button cursor-pointer"> About Us </button>
+                        <button class="header-button transparent-button cursor-pointer"> Products </button>
+                        <button class="header-button filled-button cursor-pointer"> Contact Us </button>
                     </div>
             </header>
             <div class="sticky-product-bar" aria-hidden="true">
@@ -38,8 +38,8 @@
                             <p class="sticky-product-price">&#8377;4,80,000 &ndash; 7,90,000</p>
                         </div>
                     </div>
-                    <button class="filled-button product-action-btn sticky-product-cta">Get Custom Quote</button>
-                </div>
+                    <button class="filled-button product-action-btn sticky-product-cta" id="openQuoteModal">Get Custom Quote</button>
+                 </div>
             </div>
         </div>
     
@@ -118,7 +118,7 @@
                         </div>
 
                         <div class="product-actions-row">
-                            <button class="filled-button product-action-btn">Get Custom Quote</button>
+                            <button class="filled-button product-action-btn"  id="openQuoteModal">Get Custom Quote</button>
                             <button class="outline-action-btn product-action-btn">View Technical Specs &#8250;</button>
                         </div>
                     </div>
@@ -198,7 +198,7 @@
                     </tbody>
                 </table>
             </div>
-            <button class="margin-auto transparent-button ghost-button" id="openCatalogueModal">
+            <button class="margin-auto transparent-button ghost-button cursor-pointer" id="openCatalogueModal">
                 Download Full Technical Datasheet
             </button>
         </section>

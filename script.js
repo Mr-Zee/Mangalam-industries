@@ -403,10 +403,10 @@
 // backdrop click and Escape key both close the modal
 function initModal(modalId, openBtnId, closeBtnId, options) {
     const modal    = document.getElementById(modalId);
-    const openBtn  = document.getElementById(openBtnId);
+    const openBtns = Array.from(document.querySelectorAll(`[id="${openBtnId}"]`));
     const closeBtn = document.getElementById(closeBtnId);
 
-    if (!modal || !openBtn || !closeBtn) return;
+    if (!modal || openBtns.length === 0 || !closeBtn) return;
 
     function open() {
         modal.hidden = false;
@@ -417,10 +417,10 @@ function initModal(modalId, openBtnId, closeBtnId, options) {
     function close() {
         modal.hidden = true;
         document.body.style.overflow = '';
-        openBtn.focus();
+        openBtns[0].focus();
     }
 
-    openBtn.addEventListener('click', open);
+    openBtns.forEach(btn => btn.addEventListener('click', open));
     closeBtn.addEventListener('click', close);
     modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) close(); });
